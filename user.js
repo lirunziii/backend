@@ -11,7 +11,7 @@ function generateRandomId() {
 //添加随机id到数据库
 router.post('/user',(req,res)=>{
     var randnewid=generateRandomId();
-    pool.query('insert into test (name) values(?)',[randnewid],(err,result)=>{
+    pool.query('insert into test (id) values(?)',[randnewid],(err,result)=>{
         if (err) {
             return res.status(500).json({ message: '创建新用户失败' });
         }
