@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json()); // 用于解析 JSON 请求体
 app.use('/',Routes);
 
-app.listen(3000, () => {
-  console.log('服务器启动：http://localhost:3000');
+app.listen(process.env.PORT || 3000, () => {
+  console.log('服务器启动');
 });
 
