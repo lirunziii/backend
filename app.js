@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json()); // 用于解析 JSON 请求体
 app.use('/',Routes);
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.MYSQLPORT || 3306, () => {
   console.log('服务器启动');
 });
 

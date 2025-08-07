@@ -2,11 +2,11 @@
 const mysql = require('mysql2');
 
 const pool = mysql.createPool({
-    host:"localhost",
-    user:"root",
-    password:"root123",
-    database:"test",
-    connectionLimit: 10 // 同时最大连接数
+  host: process.env.MYSQLHOST,
+  port: process.env.MYSQLPORT || 3306,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE
 });
 
 module.exports = pool;
