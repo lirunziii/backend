@@ -29,6 +29,10 @@ router.delete('/user',(req,res)=>{
     });
 
 });
+router.get('/',(req,res)=>{
+    res.send('ssssss');
+    res.end();
+})
 
 module.exports=router;
 
